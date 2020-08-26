@@ -13,3 +13,5 @@ Includes the following functions:
  * misc: vl_binsum
  * plotop: vl_plotframe
  * quickshift: vl_quickseg,vl_quickvis
+
+ With a support for GCC version 9+

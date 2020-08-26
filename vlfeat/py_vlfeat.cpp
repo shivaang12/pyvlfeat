@@ -51,7 +51,7 @@ BOOST_PYTHON_MODULE(_vlfeat)
 
 	class_<vector<VlHIKMTree_python> >("VlHIKMTreeVec")
 		.def(vector_indexing_suite<std::vector<VlHIKMTree_python> >())
-		.def("push_back", &std::vector<VlHIKMTree_python>::push_back)
+		.def("push_back", static_cast<void(vector<VlHIKMTree_python>::*)(const VlHIKMTree_python&)>(&vector<VlHIKMTree_python>::push_back))
 		.def("size", &std::vector<VlHIKMTree_python>::size)
 		;
 
